@@ -1,0 +1,352 @@
+.attendance-tracking {
+    padding: 20px;
+}
+
+.attendance-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.attendance-header h2 {
+    color: #333;
+    margin: 0 0 10px 0;
+    font-size: 1.8rem;
+}
+
+.attendance-header p {
+    color: #666;
+    margin: 0;
+}
+
+.check-in-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.check-in-card,
+.today-stats {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border: 1px solid #e1e5e9;
+}
+
+.check-in-card h3,
+.today-stats h3 {
+    margin: 0 0 20px 0;
+    color: #333;
+    font-size: 1.3rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: white;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.check-in-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.check-in-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+}
+
+.check-in-btn:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+}
+
+.checked-in-status {
+    text-align: center;
+}
+
+.status-info {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.status-info h4 {
+    margin: 0 0 15px 0;
+    color: #155724;
+    font-size: 1.2rem;
+}
+
+.status-info p {
+    margin: 5px 0;
+    color: #155724;
+}
+
+.check-out-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.check-out-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e1e5e9;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #667eea;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.market-breakdown {
+    border-top: 1px solid #e1e5e9;
+    padding-top: 15px;
+}
+
+.market-breakdown h4 {
+    margin: 0 0 15px 0;
+    color: #333;
+    font-size: 1rem;
+}
+
+.market-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f8f9fa;
+}
+
+.market-name {
+    color: #333;
+    font-weight: 500;
+}
+
+.trader-count {
+    color: #667eea;
+    font-weight: 600;
+}
+
+.attendance-history {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border: 1px solid #e1e5e9;
+}
+
+.attendance-history h3 {
+    margin: 0 0 20px 0;
+    color: #333;
+    font-size: 1.3rem;
+}
+
+.history-list {
+    display: grid;
+    gap: 15px;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+
+.history-main {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+.history-info h4 {
+    margin: 0 0 5px 0;
+    color: #333;
+    font-size: 1rem;
+}
+
+.history-date {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.history-times {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.check-in-time,
+.check-out-time {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.check-in-time {
+    color: #28a745;
+}
+
+.check-out-time {
+    color: #dc3545;
+}
+
+.status-badge .badge {
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.badge.checked-in {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.badge.checked-out {
+    background: #d4edda;
+    color: #155724;
+}
+
+.no-history {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+    border: 2px dashed #e1e5e9;
+    border-radius: 12px;
+}
+
+.insights-section {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border: 1px solid #e1e5e9;
+}
+
+.insights-section h3 {
+    margin: 0 0 20px 0;
+    color: #333;
+    font-size: 1.3rem;
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.insight-card {
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e1e5e9;
+}
+
+.insight-card h4 {
+    margin: 0 0 10px 0;
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.insight-card p {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #667eea;
+}
+
+@media (max-width: 768px) {
+    .check-in-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .history-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .history-main {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .status-badge {
+        align-self: flex-end;
+    }
+    
+    .insights-grid {
+        grid-template-columns: 1fr;
+    }
+}
