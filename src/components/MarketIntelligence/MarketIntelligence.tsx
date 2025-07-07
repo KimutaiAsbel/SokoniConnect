@@ -28,36 +28,36 @@ const MarketIntelligence: React.FC = () => {
     const [markets, setMarkets] = useState<MarketData[]>([
         {
             id: '1',
-            marketName: 'Kimara Market',
-            location: 'Kimara, Dar es Salaam',
+            marketName: 'Kapsabet Market',
+            location: 'Kapsabet, Nandi',
             products: [
-                { id: '1', name: 'Tomatoes', price: 800, currency: 'TSh', unit: 'kg', availability: 'high', trend: 'stable', lastUpdated: '2025-07-03' },
-                { id: '2', name: 'Maize', price: 600, currency: 'TSh', unit: 'kg', availability: 'medium', trend: 'up', lastUpdated: '2025-07-03' },
-                { id: '3', name: 'Rice', price: 1200, currency: 'TSh', unit: 'kg', availability: 'high', trend: 'down', lastUpdated: '2025-07-03' },
-                { id: '4', name: 'Onions', price: 900, currency: 'TSh', unit: 'kg', availability: 'low', trend: 'up', lastUpdated: '2025-07-03' }
+                { id: '1', name: 'Tomatoes', price: 800, currency: 'Ksh', unit: 'kg', availability: 'high', trend: 'stable', lastUpdated: '2025-07-03' },
+                { id: '2', name: 'Maize', price: 600, currency: 'Ksh', unit: 'kg', availability: 'medium', trend: 'up', lastUpdated: '2025-07-03' },
+                { id: '3', name: 'Rice', price: 1200, currency: 'Ksh', unit: 'kg', availability: 'high', trend: 'down', lastUpdated: '2025-07-03' },
+                { id: '4', name: 'Onions', price: 900, currency: 'Ksh', unit: 'kg', availability: 'low', trend: 'up', lastUpdated: '2025-07-03' }
             ],
             attendance: { traders: 85, customers: 230, lastUpdated: '2025-07-03' }
         },
         {
             id: '2',
-            marketName: 'Kariakoo Market',
-            location: 'Kariakoo, Dar es Salaam',
+            marketName: 'Nandi Hills Market',
+            location: 'Nandi Hills, Nandi',
             products: [
-                { id: '5', name: 'Tomatoes', price: 750, currency: 'TSh', unit: 'kg', availability: 'medium', trend: 'up', lastUpdated: '2025-07-03' },
-                { id: '6', name: 'Maize', price: 580, currency: 'TSh', unit: 'kg', availability: 'high', trend: 'stable', lastUpdated: '2025-07-03' },
-                { id: '7', name: 'Rice', price: 1150, currency: 'TSh', unit: 'kg', availability: 'medium', trend: 'stable', lastUpdated: '2025-07-03' },
-                { id: '8', name: 'Beans', price: 1000, currency: 'TSh', unit: 'kg', availability: 'high', trend: 'down', lastUpdated: '2025-07-03' }
+                { id: '5', name: 'Tomatoes', price: 750, currency: 'Ksh', unit: 'kg', availability: 'medium', trend: 'up', lastUpdated: '2025-07-03' },
+                { id: '6', name: 'Maize', price: 580, currency: 'Ksh', unit: 'kg', availability: 'high', trend: 'stable', lastUpdated: '2025-07-03' },
+                { id: '7', name: 'Rice', price: 1150, currency: 'Ksh', unit: 'kg', availability: 'medium', trend: 'stable', lastUpdated: '2025-07-03' },
+                { id: '8', name: 'Beans', price: 1000, currency: 'Ksh', unit: 'kg', availability: 'high', trend: 'down', lastUpdated: '2025-07-03' }
             ],
             attendance: { traders: 120, customers: 450, lastUpdated: '2025-07-03' }
         },
         {
             id: '3',
-            marketName: 'Tandika Market',
-            location: 'Tandika, Dar es Salaam',
+            marketName: 'Mosoriot Market',
+            location: 'Mosoriot, Nandi',
             products: [
-                { id: '9', name: 'Tomatoes', price: 850, currency: 'TSh', unit: 'kg', availability: 'low', trend: 'up', lastUpdated: '2025-07-03' },
-                { id: '10', name: 'Potatoes', price: 700, currency: 'TSh', unit: 'kg', availability: 'high', trend: 'stable', lastUpdated: '2025-07-03' },
-                { id: '11', name: 'Carrots', price: 1100, currency: 'TSh', unit: 'kg', availability: 'medium', trend: 'up', lastUpdated: '2025-07-03' }
+                { id: '9', name: 'Tomatoes', price: 850, currency: 'Ksh', unit: 'kg', availability: 'low', trend: 'up', lastUpdated: '2025-07-03' },
+                { id: '10', name: 'Potatoes', price: 700, currency: 'Ksh', unit: 'kg', availability: 'high', trend: 'stable', lastUpdated: '2025-07-03' },
+                { id: '11', name: 'Carrots', price: 1100, currency: 'Ksh', unit: 'kg', availability: 'medium', trend: 'up', lastUpdated: '2025-07-03' }
             ],
             attendance: { traders: 65, customers: 180, lastUpdated: '2025-07-03' }
         }
@@ -150,7 +150,7 @@ const MarketIntelligence: React.FC = () => {
                         {getProductPriceComparison(selectedProduct).map((item, index) => (
                             <div key={item.market} className={`comparison-card ${index === 0 ? 'best-price' : ''}`}>
                                 <h4>{item.market}</h4>
-                                <p className="price">{item.price} TSh/kg</p>
+                                <p className="price">{item.price} Ksh/kg</p>
                                 <p className="availability">
                                     <span 
                                         className="availability-dot"

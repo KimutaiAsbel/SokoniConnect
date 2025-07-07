@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as authService from '../../services/authService';
+import ForgotPassword from './ForgotPassword';
 import './Login.css';
 
 const Login: React.FC = () => {
@@ -9,26 +10,50 @@ const Login: React.FC = () => {
     const [error, setError] = useState('');
     const [isRegistering, setIsRegistering] = useState(false);
     const [email, setEmail] = useState('');
+    const [isForgotPassword, setIsForgotPassword] = useState(false);
     const navigate = useNavigate();
+
+    const [loading, setLoading] = useState(false);
 
     const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
         setError('');
+        setLoading(true);
         
         try {
+            console.log('Login form submitted');
+            
             if (isRegistering) {
+                console.log('Attempting to register user:', username);
                 await authService.register(username, email, password);
                 setIsRegistering(false);
                 setError('Registration successful! Please log in.');
             } else {
-                await authService.login(username, password);
-                navigate('/dashboard');
+                console.log('Attempting to login user:', username);
+                const result = await authService.login(username, password);
+                console.log('Login result:', result);
+                
+                if (result && result.token) {
+                    console.log('Login successful, navigating to dashboard');
+                    navigate('/dashboard');
+                } else {
+                    console.error('Login succeeded but no token returned');
+                    setError('Authentication failed. Please try again.');
+                }
             }
         } catch (err) {
+            console.error('Login/Register component error:', err);
             const errorMessage = err instanceof Error ? err.message : 'An error occurred';
             setError(errorMessage);
+        } finally {
+            setLoading(false);
         }
     };
+
+    // Handle forgot password view
+    if (isForgotPassword) {
+        return <ForgotPassword onBack={() => setIsForgotPassword(false)} />;
+    }
 
     return (
         <div className="login-container">
@@ -79,6 +104,17 @@ const Login: React.FC = () => {
                                 placeholder="Enter your password"
                                 required
                             />
+                            {!isRegistering && (
+                                <div className="forgot-password">
+                                    <button 
+                                        type="button" 
+                                        className="text-button"
+                                        onClick={() => setIsForgotPassword(true)}
+                                    >
+                                        Forgot Password?
+                                    </button>
+                                </div>
+                            )}
                         </div>
                         
                         <button type="submit" className="login-btn">
@@ -105,6 +141,9 @@ const Login: React.FC = () => {
                     <div className="demo-info">
                         <p><strong>Demo Credentials:</strong></p>
                         <p>Username: demo | Password: password</p>
+                        <p>Username: admin | Password: admin123 (Admin role)</p>
+                        <p>Username: trader | Password: trader123 (Trader role)</p>
+                        <p>Username: reports | Password: reports123 (Reports Admin role)</p>
                     </div>
                 </div>
             </div>

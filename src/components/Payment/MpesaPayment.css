@@ -1,0 +1,223 @@
+.mpesa-payment-container {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 24px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    text-align: left;
+}
+.mpesa-payment-container h2 {
+    margin-bottom: 18px;
+    color: #4a6cf7;
+    font-size: 1.3rem;
+}
+
+.payment-info {
+    background-color: #f8f9ff;
+    border-left: 4px solid #4a6cf7;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border-radius: 0 4px 4px 0;
+}
+
+.payment-info p {
+    margin: 5px 0;
+}
+
+.payment-note {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.input-help {
+    display: block;
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 4px;
+}
+
+.payment-processing {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.processing-spinner {
+    border: 4px solid rgba(74, 108, 247, 0.2);
+    border-radius: 50%;
+    border-top: 4px solid #4a6cf7;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.processing-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 5px 0;
+    color: #333;
+}
+
+.processing-note {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 5px 0;
+}
+
+.payment-status {
+    margin-top: 20px;
+    padding: 12px 15px;
+    border-radius: 4px;
+    background-color: #f8f9ff;
+    border-left: 4px solid #4a6cf7;
+    color: #333;
+    font-weight: 500;
+}
+
+.payment-status.success {
+    background-color: #eaffef;
+    border-left-color: #28a745;
+    color: #155724;
+}
+.mpesa-payment-container .form-group {
+    margin-bottom: 16px;
+}
+.mpesa-payment-container label {
+    display: block;
+    margin-bottom: 6px;
+    color: #333;
+    font-weight: 500;
+}
+.mpesa-payment-container input[type="text"],
+.mpesa-payment-container input[type="number"] {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+.mpesa-payment-container .login-btn {
+    width: 100%;
+    padding: 10px;
+    background: #4a6cf7;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.mpesa-payment-container .login-btn:disabled {
+    background: #b3c6ff;
+    cursor: not-allowed;
+}
+.payment-status {
+    margin-top: 18px;
+    font-size: 1rem;
+    color: #2d7a2d;
+    text-align: center;
+}
+
+/* Payment Page Styles */
+.payment-page {
+    padding: 20px;
+}
+
+.payment-page h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+.payment-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.payment-section {
+    flex: 0 0 300px;
+    max-width: 400px;
+}
+
+.payment-history-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.payment-history-section h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.payment-history-table {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    overflow: auto;
+}
+
+.payment-history-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.payment-history-table th,
+.payment-history-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.payment-history-table th {
+    background-color: #f9fafb;
+    font-weight: 600;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.payment-history-table tr:hover {
+    background-color: #f9fafb;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.status-success {
+    background-color: #e6f7e6;
+    color: #2d7a2d;
+}
+
+.status-pending {
+    background-color: #fef9e7;
+    color: #967c14;
+}
+
+.status-failed {
+    background-color: #fdedeb;
+    color: #c13528;
+}
+
+.status-default {
+    background-color: #f1f1f1;
+    color: #666;
+}
+
+.error {
+    color: #c13528;
+}

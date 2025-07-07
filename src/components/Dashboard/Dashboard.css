@@ -163,6 +163,32 @@
     transform: translateY(-1px);
 }
 
+.administrator-welcome {
+    text-align: center;
+    padding: 40px 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin: 20px;
+}
+
+.administrator-welcome h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.administrator-welcome p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.user-info small {
+    color: #ddd;
+    font-size: 0.8em;
+    margin-left: 5px;
+}
+
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;

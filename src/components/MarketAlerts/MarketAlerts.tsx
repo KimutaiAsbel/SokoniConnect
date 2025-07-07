@@ -16,30 +16,30 @@ const MarketAlerts: React.FC = () => {
     const [alerts, setAlerts] = useState<MarketAlert[]>([
         {
             id: '1',
-            marketName: 'Kimara Market',
+            marketName: 'Kapsabet Market',
             date: '2025-07-04',
             time: '06:00',
-            location: 'Kimara, Dar es Salaam',
+            location: 'Kapsabet, Nandi',
             type: 'reminder',
-            message: 'Market day tomorrow at Kimara Market. Set up starts at 6:00 AM.',
+            message: 'Market day tomorrow at Kapsabet Market. Set up starts at 6:00 AM.',
             isEnabled: true
         },
         {
             id: '2',
-            marketName: 'Kariakoo Market',
+            marketName: 'Nandi Hills Market',
             date: '2025-07-06',
             time: '05:30',
-            location: 'Kariakoo, Dar es Salaam',
+            location: 'Nandi Hills, Nandi',
             type: 'important',
             message: 'Special wholesale market this Sunday. Early setup recommended.',
             isEnabled: true
         },
         {
             id: '3',
-            marketName: 'Tandika Market',
+            marketName: 'Mosoriot Market',
             date: '2025-07-05',
             time: '06:30',
-            location: 'Tandika, Dar es Salaam',
+            location: 'Mosoriot, Nandi',
             type: 'weather',
             message: 'Weather alert: Light rain expected. Bring waterproof covers.',
             isEnabled: true
@@ -126,7 +126,7 @@ const MarketAlerts: React.FC = () => {
                                 type="text"
                                 value={newAlert.marketName}
                                 onChange={(e) => setNewAlert({...newAlert, marketName: e.target.value})}
-                                placeholder="e.g., Kimara Market"
+                                placeholder="e.g., Kapsabet Market"
                             />
                         </div>
                         <div className="form-group">
@@ -151,7 +151,7 @@ const MarketAlerts: React.FC = () => {
                                 type="text"
                                 value={newAlert.location}
                                 onChange={(e) => setNewAlert({...newAlert, location: e.target.value})}
-                                placeholder="e.g., Kimara, Dar es Salaam"
+                                placeholder="e.g., Kapsabet, Nandi"
                             />
                         </div>
                         <div className="form-group">

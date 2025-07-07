@@ -27,10 +27,10 @@ const AttendanceTracking: React.FC = () => {
     const [user, setUser] = useState<any>(null);
 
     const markets: MarketOption[] = [
-        { id: '1', name: 'Kimara Market', location: 'Kimara, Dar es Salaam' },
-        { id: '2', name: 'Kariakoo Market', location: 'Kariakoo, Dar es Salaam' },
-        { id: '3', name: 'Tandika Market', location: 'Tandika, Dar es Salaam' },
-        { id: '4', name: 'Temeke Market', location: 'Temeke, Dar es Salaam' },
+        { id: '1', name: 'Kapsabet Market', location: 'Kapsabet, Nandi' },
+        { id: '2', name: 'Nandi Hills Market', location: 'Nandi Hills, Nandi' },
+        { id: '3', name: 'Mosoriot Market', location: 'Mosoriot, Nandi' },
+        { id: '4', name: 'Kobujoi Market', location: 'Kobujoi, Nandi' },
     ];
 
     useEffect(() => {
