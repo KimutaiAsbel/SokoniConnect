@@ -12,7 +12,10 @@
     "server": "npx ts-node --project backend/tsconfig.json backend/server.ts",
     "server:dev": "nodemon backend/server.ts",
     "dev": "concurrently \"npm run server:dev\" \"npm start\"",
-    "build:full": "npm run build && tsc backend/server.ts --outDir dist"
+    "build:full": "npm run build && tsc backend/server.ts --outDir dist",
+    "build:backend": "cd backend && npm install && npm run build",
+    "deploy:netlify": "npm run build",
+    "deploy:heroku": "npm run build:backend"
   },
   "dependencies": {
     "@types/node": "^18.15.0",

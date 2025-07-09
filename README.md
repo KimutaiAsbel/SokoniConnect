@@ -12,7 +12,7 @@
 
 Sokoni Connect is a modern, full-stack web application designed to address local market inefficiencies in Kenya. It provides a comprehensive platform for market management, trader services, and digital payment processing through M-Pesa integration.
 
-**Live Demo**: *Your deployed URL here*  
+**Live Demo**: *Deploy following the instructions in DEPLOYMENT.md*  
 **Repository**: https://github.com/kimutaiAsbel/SokoniConnect
 
 ## 🎯 Purpose & Vision
